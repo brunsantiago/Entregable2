@@ -1,6 +1,10 @@
 package com.example.dh.entregable2;
 
+
+
+import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.design.widget.NavigationView;
@@ -26,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationViewListener navigationViewListener = new NavigationViewListener();
         navigationView.setNavigationItemSelectedListener(navigationViewListener);
 
-    }
+}
 
     private class NavigationViewListener implements NavigationView.OnNavigationItemSelectedListener{
 
@@ -35,22 +39,27 @@ public class MainActivity extends AppCompatActivity {
 
             FragmentManager fragmentManager = getFragmentManager();
 
-            if(item.getItemId() == R.id.primerFragment){
+            if(item.getItemId() == R.id.recetasFragment){
 
-                cargadorDeFragments(new PrimerFragment());
+                cargadorDeFragments(new RecetasFragment());
             }
-            else if(item.getItemId() == R.id.segundoFragment){
+            else if(item.getItemId() == R.id.aboutUsFragment){
 
-                cargadorDeFragments(new SegundoFragment());
+                cargadorDeFragments(new AboutUsFragment());
             }
-            else if(item.getItemId() == R.id.tercerFragment){
 
-                cargadorDeFragments(new TercerFragment());
-            }
+
             drawerLayout.closeDrawers();
 
             return true;
         }
+    }
+
+    private void cargadorDeFragments(Fragment unFragment) {
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.fragment_elegido,unFragment);
+        fragmentTransaction.commit();
     }
 
 
