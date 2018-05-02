@@ -1,14 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AboutUsFragment">
+    android:background="@drawable/fondolayout"
+    android:orientation="vertical"
+    tools:context=".View.AboutUsFragment">
 
-    <TextView
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="About Us"
-        android:textAlignment="center" />
+        android:layout_height="150dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#84ffffff">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="@drawable/logo" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/alegreya_sans_medium_italic"
+                android:text="Cocina Argentina"
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#84ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/contrail_one"
+                android:text="Cocina Argentina ® es un marca registrada pertenenciente a Web Design Group S.A. Queda prohibida la reproducción total o parcial de esta publicación, por cualquier medio o procedimiento, sin la autorización previa, expresa y por escrito del editor. Toda forma de utilización no autorizada será perseguida con lo establecido en la ley federal del derecho de autor. Derechos Reservados Conforme a la ley, ©, www.cocinaargentina.com.ar (Buenos Aires 2018)."
+                android:textAlignment="center"
+                android:textColor="#333232"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="Direccion: Av. Ing. Huergo 1468 - Ciudad Autonoma de Buenos Aires - Argentina."
+                android:textAlignment="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="E-mail: info@cocinaargentina.com.ar"
+                android:textAlignment="center" />
+
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

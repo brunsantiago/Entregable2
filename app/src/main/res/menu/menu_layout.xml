@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item
-        android:id="@+id/recetasFragment"
-        android:title="Recetas">
+    <item android:title="Recetas">
+    <menu>
+        <item
+            android:id="@+id/recetasActivity"
+            android:title="Todas Recetas">
+        </item>
 
+    </menu>
     </item>
 
     <item
-        android:id="@+id/aboutUsFragment"
+        android:id="@+id/aboutUsActivity"
         android:title="About Us">
-
     </item>
+
 
 
 </menu>
