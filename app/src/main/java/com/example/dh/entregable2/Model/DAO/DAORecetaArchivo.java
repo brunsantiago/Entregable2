@@ -14,7 +14,7 @@ public class DAORecetaArchivo {
 
 
         listaDeRecetas.add(new Receta(2,"Vacio","","Vacio","Prender la Parrilla y meter el vacio",R.drawable.vacio,""));
-        listaDeRecetas.add(new Receta(3,"Ensalada","","Chorizo y Pan","Prender la Parrilla y meter el chorizo",R.drawable.ensalada,""));
+        listaDeRecetas.add(new Receta(3,"Ensalada","","Lechuga y Tomate","Lavar la lechuga, cortar los tomates y mezclar todo junto con aceite y vinagre.",R.drawable.ensalada,""));
 
 
         return listaDeRecetas;
